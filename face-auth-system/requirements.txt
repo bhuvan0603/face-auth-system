@@ -1,7 +1,8 @@
 fastapi
 uvicorn
-sqlalchemy
-pillow
-numpy
 python-multipart
-python-jose
+opencv-python-headless
+face-recognition
+numpy
+pillow
+PyJWT
