@@ -1,9 +1,10 @@
 from sqlalchemy import Column, Integer, String, LargeBinary
 from app.db import Base
 
+
 class User(Base):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, unique=True, index=True)
-    face_encoding = Column(LargeBinary)
+    name = Column(String, unique=True, index=True, nullable=False)
+    face_encoding = Column(LargeBinary, nullable=False)
