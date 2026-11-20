@@ -1,3 +1,4 @@
+
 import React from "react";
 import Webcam from "react-webcam";
 
@@ -10,6 +11,12 @@ function Camera({ webcamRef }) {
         screenshotFormat="image/jpeg"
         width={260}
         height={220}
+        onUserMedia={() => {
+          console.log("Camera started successfully!");
+        }}
+        onUserMediaError={(error) => {
+          console.error("Camera error:", error);
+        }}
         style={{
           borderRadius: "20px",
           border: "2px solid #00E5FF",
